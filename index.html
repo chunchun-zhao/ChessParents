@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChessParents - Your Guide to Youth Chess</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -16,8 +19,19 @@
 
     <main>
         <h2>Find Tournaments Near You</h2>
-        <div id="map-container">
-            <img src="assets/us-map.svg" alt="A map of the United States showing chess tournament locations.">
+        
+        <div class="filter-container">
+            <label for="year-select">Select a Year:</label>
+            <select name="years" id="year-select">
+                </select>
+        </div>
+
+        <div id="map"></div>
+
+        <div id="tournament-list-container">
+            <h3>Tournaments in <span id="list-year"></span></h3>
+            <div id="tournament-list">
+                </div>
         </div>
     </main>
 
@@ -25,5 +39,10 @@
         <p>&copy; 2025 ChessParents. All rights reserved.</p>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChessParents - Your Guide to Youth Chess</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+    
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -18,31 +20,35 @@
     </header>
 
     <main>
-        <h2>Find Tournaments Near You</h2>
-        
+        <h2>Find Tournaments</h2>
+
         <div class="filter-container">
-            <label for="year-select">Select a Year:</label>
-            <select name="years" id="year-select">
+            
+            <div class="filter-left">
+                <label for="year-select">Select Year:</label>
+                <select id="year-select">
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
                 </select>
+            </div>
+
+            <div class="filter-right">
+                <input type="text" id="location-input" placeholder="Enter Zip, City, or State...">
+                <button id="location-button">Zoom to Area</button>
+            </div>
+
         </div>
 
         <div id="map"></div>
+        
+        <div id="tournament-list"></div>
 
-        <div id="tournament-list-container">
-            <h3>Tournaments in <span id="list-year"></span></h3>
-            <div id="tournament-list">
-                </div>
-        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 ChessParents. All rights reserved.</p>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-     
-    <script src="js/main.js"></script>
 </body>
 </html>
